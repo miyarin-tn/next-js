@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/Home.module.scss';
 
-export default function Home(): JSX.Element {
+const Home = (): JSX.Element => {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,4 +27,6 @@ export default function Home(): JSX.Element {
       <footer className={styles.footer}>Powered by Thinh Nguyen</footer>
     </div>
   );
-}
+};
+
+export default Home;
