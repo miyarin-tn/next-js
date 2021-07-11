@@ -1,8 +1,12 @@
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetStaticPropsContext, GetStaticPropsResult } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Home.module.scss';
 
 const Home = (): JSX.Element => {
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +17,7 @@ const Home = (): JSX.Element => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          {t('WELCOME')} <a href="https://nextjs.org">Next.js!</a>
         </h1>
         <div className={styles.image + ' ' + styles.circle}>
           <Image src="/author.jpg" alt="Thinh Nguyen" width={50} height={50} />
@@ -24,9 +28,22 @@ const Home = (): JSX.Element => {
         </p>
       </main>
 
-      <footer className={styles.footer}>Powered by Thinh Nguyen</footer>
+      <footer className={styles.footer}>
+        {t('POWERED_BY', { author: 'Thinh Nguyen' })}
+      </footer>
     </div>
   );
+};
+
+export const getStaticProps = async ({
+  locale,
+}: GetStaticPropsContext): Promise<GetStaticPropsResult<any>> => {
+  return {
+    props: {
+      // @ts-ignore
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 };
 
 export default Home;
