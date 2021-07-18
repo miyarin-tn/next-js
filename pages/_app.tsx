@@ -1,3 +1,5 @@
+import { Provider } from 'react-redux';
+import store from '@/store/configureStore';
 import { useEffect } from 'react';
 import { appWithTranslation } from 'next-i18next';
 import { ThemeProvider } from '@material-ui/core/styles';
@@ -14,12 +16,15 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
       jssStyles.parentElement?.removeChild(jssStyles);
     }
   }, []);
+
   return (
-    <ThemeProvider theme={theme}>
-      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-      <CssBaseline />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </Provider>
   );
 };
 
