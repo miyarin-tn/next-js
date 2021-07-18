@@ -1,4 +1,13 @@
 {
   "WELCOME": "Chào mừng đến với",
-  "POWERED_BY": "Cung cấp bởi {{author}}"
+  "POWERED_BY": "Cung cấp bởi {{author}}",
+  "ITEM": "không có mục nào | 1 mục | {{count}} mục",
+  "ERROR": "Lỗi",
+  "TOKEN_EXPIRED": "Mã đã hết hạn",
+  "UNAUTHORIZED": "Chưa xác thực",
+  "REQUEST_METHOD_NOT_ALLOWED": "Phương thức yêu cầu không được phép",
+  "LOGIN": "Đăng nhập",
+  "LOGOUT": "Đăng xuất",
+  "EMAIL": "Email",
+  "PASSWORD": "Mật khẩu"
 }

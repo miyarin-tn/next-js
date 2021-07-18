@@ -1,4 +1,13 @@
 {
   "WELCOME": "Welcome to",
-  "POWERED_BY": "Powered by {{author}}"
+  "POWERED_BY": "Powered by {{author}}",
+  "ITEM": "no item | 1 item | {{count}} items",
+  "ERROR": "Error",
+  "TOKEN_EXPIRED": "Token is expired",
+  "UNAUTHORIZED": "Unauthorized",
+  "REQUEST_METHOD_NOT_ALLOWED": "Request method not allowed",
+  "LOGIN": "Login",
+  "LOGOUT": "Logout",
+  "EMAIL": "Email",
+  "PASSWORD": "Password"
 }

@@ -3,10 +3,14 @@ import store from '@/store/configureStore';
 import { useEffect } from 'react';
 import { appWithTranslation } from 'next-i18next';
 import { ThemeProvider } from '@material-ui/core/styles';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '@/configs/theme';
 import '@/assets/scss/globals.scss';
+
 import type { AppProps } from 'next/app';
+
+import '@/plugins/axios';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   useEffect(() => {
