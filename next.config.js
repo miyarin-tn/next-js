@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const { i18n } = require('./next-i18next.config');
 
 module.exports = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   env: {
     version: '0.1.0',
   },
