@@ -17,4 +17,5 @@ module.exports = {
     return config;
   },
   i18n,
+  distDir: process.env.NODE_ENV === 'production' ? '.next-prod' : '.next',
 };
